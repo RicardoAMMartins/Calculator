@@ -18,8 +18,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.calculator.ui.theme.LightGray
-import com.example.calculator.ui.theme.Orange
+import com.example.calculator.ui.theme.SkyBlue
+import com.example.calculator.ui.theme.Red
+import com.example.calculator.ui.theme.LightGreen
 
 @Composable
 fun calculator(
@@ -33,7 +34,7 @@ fun calculator(
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter),//it is only possible because this column is inside of the box
-            verticalArrangement = Arrangement.spacedBy(buttonSpacing)//will make sure that it is 8 dp of space betweenall items of the column in a vertical direction
+            verticalArrangement = Arrangement.spacedBy(buttonSpacing)//will make sure that it is 8 dp of space between all items of the column in a vertical direction
         ){
                 Text(
                     text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
@@ -54,7 +55,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "AC",
                     modifier = Modifier
-                        .background(LightGray)
+                        .background(SkyBlue)
                         .aspectRatio(2f)//width of the button is twice as wide as it is high
                         .weight(2f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                         onClick = {
@@ -62,9 +63,9 @@ fun calculator(
                     }
                 )
                 smallCalculaterButton(
-                    symbol = "Delete",
+                    symbol = "DEL",
                     modifier = Modifier
-                        .background(LightGray)
+                        .background(SkyBlue)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -74,7 +75,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "/",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(Red)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -90,7 +91,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "7",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -100,7 +101,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "8",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -110,7 +111,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "9",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -120,7 +121,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "x",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(Red)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -136,7 +137,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "4",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -146,7 +147,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "5",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -156,7 +157,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "6",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -166,7 +167,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "-",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(Red)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -182,7 +183,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "1",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -192,7 +193,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "2",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -202,7 +203,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "3",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -212,7 +213,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "+",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(Red)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -228,7 +229,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "0",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(2f)//width of the button is twice as wide as it is high
                         .weight(2f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -238,7 +239,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = ".",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(LightGreen)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {
@@ -248,7 +249,7 @@ fun calculator(
                 smallCalculaterButton(
                     symbol = "=",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(Red)
                         .aspectRatio(1f)//width of the button is twice as wide as it is high
                         .weight(1f),//vai ocupar o space dependente do weight dos outros butoes do resto da row assim o composable ira definir automaticamente
                     onClick = {

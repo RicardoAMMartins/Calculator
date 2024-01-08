@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 
 class calculaterViewModel:ViewModel() {
     var state by mutableStateOf(calculaterState())
-        private set // with this we can change the state from the outside but we can still access and read it
+         
 
     fun onAction(action: calculatorAction){
         when (action){
@@ -51,8 +51,14 @@ class calculaterViewModel:ViewModel() {
                 number2 = "",
                 operation = null
             )
+            if (state.number1.length == 8) {
+                state = state.copy(
+                    number1 = state.number1 + "\n"
+                )
+            }
         }
     }
+
 
     private fun enterOperation(operation: calculatorOperation) {
         if (state.number1.isNotBlank()){
@@ -83,10 +89,15 @@ class calculaterViewModel:ViewModel() {
             if (state.number1.length >= MAX_NUMBER_LENGTH){
                 return
             }
-                state = state.copy(
-                    number1 = state.number1 + number
-                )
+            state = state.copy(
+                number1 = state.number1 + number
+            )
             return
+        }
+        if (state.number2.isEmpty()){
+            state = state.copy(
+                number1 = state.number1 + "\n"
+            )
         }
         if (state.number2.length >= MAX_NUMBER_LENGTH){
             return

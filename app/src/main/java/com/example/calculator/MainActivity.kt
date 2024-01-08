@@ -12,11 +12,12 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.calculator.ui.theme.CalculatorTheme
-import com.example.calculator.ui.theme.MediumGray
+import com.example.calculator.ui.theme.LightGreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     buttonSpacing = buttonSpacing,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(MediumGray)
+                        .background(Color.Black)
                         .padding(16.dp)
                 )
 
