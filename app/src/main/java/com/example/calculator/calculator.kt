@@ -36,6 +36,12 @@ fun calculator(
                 .align(Alignment.BottomCenter),//it is only possible because this column is inside of the box
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)//will make sure that it is 8 dp of space between all items of the column in a vertical direction
         ){
+            Text(text = "Insira os números para realizar a operação",
+                textAlign = TextAlign.Center,
+                modifier = modifier.fillMaxWidth(),
+                        fontWeight = FontWeight.Light,
+                fontSize = 20.sp,
+                color = Color.Yellow)
                 Text(
                     text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
                     textAlign = TextAlign.End,
